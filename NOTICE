@@ -22,3 +22,5 @@ Avocado and its distribution binaries incorporate or depend on the following thi
 ---
 
 Full source code for third-party dependencies is available from their respective upstream repositories. Avocado binaries are built against these components under their respective licenses.
+
+Find RtaForge on Hugging Face: [huggingface.co/RtaForge](https://huggingface.co/RtaForge)

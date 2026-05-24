@@ -13,9 +13,11 @@ Avocado and its distribution binaries incorporate or depend on the following thi
 - **RWKV**: Based on the RWKV project (Apache-2.0).
 - **S4**: Based on the Structured State Space work (MIT).
 
-### GPU Backends
+### GPU Backends & Formats
+- **CUDA**: Proprietary components from NVIDIA.
 - **ROCm / HIP**: Proprietary/Open components from AMD.
 - **Vulkan**: Standardized by the Khronos Group.
+- **Safetensors**: Based on the HuggingFace safetensors library (Apache-2.0).
 
 ---
 

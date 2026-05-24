@@ -79,6 +79,10 @@ tar -xzf avocado-linux-amd64-v0.1.0.tar.gz
 sha256sum -c SHA256SUMS
 ```
 
+## Models
+
+Find our pre-crushed models and base weights on Hugging Face: [huggingface.co/RtaForge](https://huggingface.co/RtaForge)
+
 ## Quick start
 
 ```bash

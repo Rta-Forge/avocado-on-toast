@@ -1,0 +1,22 @@
+# Avocado — Third-Party Notices
+
+Avocado and its distribution binaries incorporate or depend on the following third-party components:
+
+### Go Libraries
+- **Standard Library**: BSD-style license.
+- **github.com/google/uuid**: BSD-3-Clause.
+- **github.com/gin-gonic/gin**: MIT License.
+- **gopkg.in/yaml.v3**: MIT/Apache-2.0.
+
+### Model Architectures & Inspiration
+- **Mamba / Mamba2**: Inspired by the work of Tri Dao and Albert Gu (Apache-2.0).
+- **RWKV**: Based on the RWKV project (Apache-2.0).
+- **S4**: Based on the Structured State Space work (MIT).
+
+### GPU Backends
+- **ROCm / HIP**: Proprietary/Open components from AMD.
+- **Vulkan**: Standardized by the Khronos Group.
+
+---
+
+Full source code for third-party dependencies is available from their respective upstream repositories. Avocado binaries are built against these components under their respective licenses.

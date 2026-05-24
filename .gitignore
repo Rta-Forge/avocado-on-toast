@@ -1,0 +1,17 @@
+# Local release staging (binaries belong on GitHub Releases, not in git)
+dist/
+staging/
+*.tar.gz
+!avocado-community-*.tar.gz
+*.zip
+*.deb
+*.rpm
+
+# Checksum scratch
+SHA256SUMS.local
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/

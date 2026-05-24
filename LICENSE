@@ -1,0 +1,44 @@
+# Avocado Binary License (ABL v1.0)
+
+**"Sovereign Inference, Opaque Core"**
+
+---
+
+## 1. Grant of License
+
+This license governs the use of the Avocado inference engine binaries (`avocado`, `avocado-server`) and associated materials (collectively, the "Software"). 
+
+The Licensor (RtaForge) grants You a non-exclusive, non-transferable, royalty-free, revocable license to execute and use the Software in binary form for personal and non-commercial evaluation purposes only.
+
+Commercial use, including production deployment, SaaS hosting, or integration into revenue-generating applications, requires a separate commercial license from RtaForge.
+
+## 2. Restrictions
+
+You agree that You will NOT:
+- **Reverse Engineer**: Decompile, disassemble, or attempt to extract the source code, embedded GPU kernels (SPIR-V, PTX, HSACO), or proprietary mathematics from the binary.
+- **Extraction**: Extract or attempt to extract any embedded data files, kernels, or model assets from the Software.
+- **Resell or Sublicense**: Sell, rent, lease, or offer the Software as a paid service or SaaS without explicit commercial authorization.
+- **Modify**: Alter, adapt, or create derivative works from the binary.
+- **Military Use**: Deploy the Software for weapons development, autonomous weapons, or military applications without a specific Sovereign License.
+
+## 3. Intellectual Property
+
+The Software, including all embedded kernels, logic, and architecture implementations, remains the exclusive property of the Licensor. This is a license for binary use only; no source code rights are granted.
+
+## 4. Termination
+
+This license terminates automatically and immediately if You violate any of its terms. Upon termination, You must immediately cease all use of the Software and destroy all copies in Your possession.
+
+## 5. No Warranty
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. You assume all risks associated with executing the Software.
+
+## 6. Limitation of Liability
+
+IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE USE OF THE SOFTWARE, INCLUDING BUT NOT LIMITED TO DIRECT, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES.
+
+---
+
+**License Version**: ABL v1.0  
+**Effective Date**: 2026-05-24  
+**Licensor**: RtaForge

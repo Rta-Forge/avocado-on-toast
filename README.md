@@ -44,16 +44,18 @@ Think of it like GPU drivers: you get the binary that runs on your machine; the 
 
 ## Install
 
+Download the latest release from the [Releases page](https://github.com/Rta-Forge/avocado-on-toast/releases), verify the checksum, and unpack:
+
 ```bash
-# Example — replace VERSION when a release exists
-curl -fsSL https://github.com/Rta-Forge/avocado-on-toast/releases/download/v0.1.0/install.sh | bash
+sha256sum -c SHA256SUMS
+tar -xzf avocado-linux-amd64-vX.Y.Z.tar.gz
+./avocado-server --help
 ```
 
-Releases will be published here soon. For now, you can download from [Releases](https://github.com/Rta-Forge/avocado-on-toast/releases), verify `SHA256SUMS`, unpack:
+Or use the install script shipped with each release:
 
 ```bash
-tar -xzf avocado-linux-amd64-v0.1.0.tar.gz
-./avocado-server --help
+curl -fsSL https://github.com/Rta-Forge/avocado-on-toast/releases/latest/download/install.sh | bash
 ```
 
 ## Binaries

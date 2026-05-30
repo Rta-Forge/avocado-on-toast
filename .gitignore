@@ -1,3 +1,6 @@
+# Engine source — keep local only, never push to this repo
+src/
+
 # Local release staging (binaries belong on GitHub Releases, not in git)
 dist/
 staging/

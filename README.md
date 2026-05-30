@@ -29,8 +29,6 @@ Think of it like GPU drivers: you get the binary that runs on your machine; the 
 | Small team / lab | Few users, own hardware | Community binary |
 | Production / OEM / fieldable | Enterprise or partner deployment | Sovereign — contact RtaForge |
 
-**Before public release:** License text is draft until counsel sign-off.
-
 ---
 
 ## What is in this repo
@@ -101,7 +99,7 @@ Avocado is currently distributed as a **source-opaque binary** to protect propri
 As time and resources permit, we intend to publish the source code for a **Basic Avocado Engine** supporting open/standard formats (Mamba, S4, RWKV).
 
 - **Purpose**: This future release will be for **audit and trust purposes only**.
-- **Scope**: The open version will be a reference implementation. Proprietary runtime optimizations and patented Ṛta-SSM architecture logic will remain closed and exclusive to the Sovereign/Enterprise editions unless a better strategic alternative emerges.
+- **Scope**: The open version will be a reference implementation. Proprietary runtime optimizations and sovereign architecture logic will remain closed and exclusive to Sovereign/Enterprise editions.
 
 We are not building a community-driven town hall; we are building a verifiable refinery for sovereign intelligence.
 

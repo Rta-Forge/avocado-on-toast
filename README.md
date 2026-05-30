@@ -91,17 +91,13 @@ Point any OpenAI-compatible client at `http://127.0.0.1:8080/v1`.
 
 ---
 
-## Transparency Roadmap
+## Transparency
 
-Avocado is currently distributed as a **source-opaque binary** to protect proprietary IP and ensure stable execution on air-gapped hardware. However, we acknowledge the importance of trust in the local AI ecosystem.
+Avocado ships as a binary. The source is not published.
 
-**Our Commitment:**
-As time and resources permit, we intend to publish the source code for a **Basic Avocado Engine** supporting open/standard formats (Mamba, S4, RWKV).
+If you need to audit the engine for security, compliance, or integration work — ask. We share source with people who have a legitimate reason to see it. Contact guha@rtaforge.in.
 
-- **Purpose**: This future release will be for **audit and trust purposes only**.
-- **Scope**: The open version will be a reference implementation. Proprietary runtime optimizations and sovereign architecture logic will remain closed and exclusive to Sovereign/Enterprise editions.
-
-We are not building a community-driven town hall; we are building a verifiable refinery for sovereign intelligence.
+We are not building a community-driven project. We are building a sovereign inference stack. Those are different things, and we are honest about which one this is.
 
 ## License
 

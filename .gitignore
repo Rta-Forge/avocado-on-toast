@@ -5,7 +5,7 @@ src/
 dist/
 staging/
 *.tar.gz
-!avocado-community-*.tar.gz
+!avocado-*.tar.gz
 *.zip
 *.deb
 *.rpm

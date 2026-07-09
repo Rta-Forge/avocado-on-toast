@@ -5,12 +5,13 @@ src/
 dist/
 staging/
 *.tar.gz
-!avocado-*.tar.gz
 *.zip
 *.deb
 *.rpm
 
-# Checksum scratch
+# Checksums belong to a specific release (uploaded as release assets), not root
+SHA256SUMS
+SHA256SUMS.asc
 SHA256SUMS.local
 
 # OS / editor

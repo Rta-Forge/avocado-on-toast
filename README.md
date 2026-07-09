@@ -2,32 +2,9 @@
 
 Public **binary distribution** for Avocado — local state-space model inference.
 
-Avocado is a lightweight inference runner with OpenAI/Ollama-compatible APIs. This repository ships **compiled binaries only**. Engine source is not published here.
+Avocado is a lightweight inference runner with OpenAI/Ollama-compatible APIs. Every platform build is closed and obfuscated (garble, all identifiers/strings scrambled). Engine source is not published here.
 
 > An avocado a day keeps the credit card bills away.
-
----
-
-## Community vs Sovereign
-
-| | **Community** (this repo) | **Sovereign** (private pipeline) |
-|---|---------------------------|----------------------------------|
-| **What** | Prebuilt binaries + install docs | Optimized builds for internal & partner use |
-| **Backends** | Standard Mamba, S4, RWKV, generic GPU paths | Full monorepo build with proprietary optimizations |
-| **Source** | Not distributed | Private monorepo only |
-| **License** | [Binary License](LICENSE) | Separate written agreement |
-
-Think of it like GPU drivers: you get the binary that runs on your machine; the implementation stays with the vendor.
-
----
-
-## Intended use
-
-| Tier | Audience | Build |
-|------|----------|-------|
-| Personal / hobby | Your laptop or workstation | Community binary |
-| Small team / lab | Few users, own hardware | Community binary |
-| Production / OEM / fieldable | Enterprise or partner deployment | Sovereign — contact RtaForge |
 
 ---
 
@@ -35,28 +12,33 @@ Think of it like GPU drivers: you get the binary that runs on your machine; the 
 
 | Included | Not included |
 |----------|--------------|
-| Release binaries (GitHub Releases) | Engine source code |
-| Install scripts & checksums | Model weights |
-| README & license | Sovereign / enterprise builds |
-| Release notes | Training tooling |
+| Release binaries (GitHub Releases, all 5 platforms) | Engine source code |
+| Checksums (`SHA256SUMS`) + GPG signature (`SHA256SUMS.asc`) | Model weights |
+| README & license | Training tooling |
+
+There is no separate "sovereign" build or repo. This binary — obfuscated, GPU-accelerated (Vulkan/Metal) — is the only build. Think of it like GPU drivers: you get the binary that runs on your machine; the implementation stays with the vendor.
 
 ---
 
 ## Install
 
-Download the latest release from the [Releases page](https://github.com/Rta-Forge/avocado-on-toast/releases), verify the checksum, and unpack:
+Download the platform archive for your machine from the [Releases page](https://github.com/Rta-Forge/avocado-on-toast/releases/latest), verify it, and unpack:
 
 ```bash
-sha256sum -c SHA256SUMS
-tar -xzf avocado-linux-amd64-vX.Y.Z.tar.gz
+# Linux/macOS
+tar -xzf avocado-linux-amd64.tar.gz   # or your platform's archive
+sha256sum -c SHA256SUMS               # or: shasum -a 256 -c SHA256SUMS on macOS
+gpg --verify SHA256SUMS.asc SHA256SUMS
 ./avocado-server --help
 ```
 
-Or use the install script shipped with each release:
-
 ```bash
-curl -fsSL https://github.com/Rta-Forge/avocado-on-toast/releases/latest/download/install.sh | bash
+# pip installer (downloads the right binary on first use)
+pip install rtaforge
 ```
+
+**macOS:** if Gatekeeper blocks the unsigned binary, run `xattr -dr com.apple.quarantine ./avocado`.
+**Windows:** SmartScreen may warn on first run — "More info → Run anyway".
 
 ## Binaries
 
@@ -64,19 +46,23 @@ curl -fsSL https://github.com/Rta-Forge/avocado-on-toast/releases/latest/downloa
 |--------|---------|
 | `avocado` | Universal CLI (chat, run, plan) |
 | `avocado-server` | HTTP server (OpenAI + Ollama-compatible API) |
+| `avocado-session` | Persistent chat session management |
+| `avocado-plan` | Multi-step plan execution |
 | `pavement` | Model crusher (Safetensors -> .splat) |
 
-
-| OS | Arch | Status |
-|----|------|--------|
-| Linux | x86_64 | Primary |
-| Linux | aarch64 | Planned |
-| macOS | arm64 | Planned |
+| OS | Arch | Backend |
+|----|------|---------|
+| Linux | x86_64 | Vulkan |
+| Linux | aarch64 | Vulkan |
+| macOS | arm64 | Metal |
+| macOS | x86_64 | Metal |
+| Windows | x86_64 | Vulkan |
 
 ## Verify downloads
 
 ```bash
 sha256sum -c SHA256SUMS
+gpg --verify SHA256SUMS.asc SHA256SUMS
 ```
 
 ## Models
@@ -99,16 +85,14 @@ Avocado ships as a binary. The source is not published.
 
 If you need to audit the engine for security, compliance, or integration work — ask. We share source with people who have a legitimate reason to see it. Contact guha@rtaforge.in.
 
-We are not building a community-driven project. We are building a sovereign inference stack. Those are different things, and we are honest about which one this is.
+We are not building a community-driven project. We are building a sovereign inference stack, and shipping one honest binary rather than splitting trust into tiers.
 
 ## License
 
-Use of Community binaries is governed by the [Avocado Binary License](LICENSE) (proprietary, binary-only).
-
-Sovereign builds require a separate agreement. See [NOTICE](NOTICE) for third-party attributions in release artifacts.
+Use of these binaries is governed by the [Avocado Binary License](LICENSE) (proprietary, binary-only). See [NOTICE](NOTICE) for third-party attributions in release artifacts.
 
 ## Support
 
 Public issues: download, install, and checksum problems only.
 
-Enterprise / Sovereign licensing: contact Guha Kashyap (guha@rtaforge.in) directly.
+Licensing / commercial use: contact Guha Kashyap (guha@rtaforge.in) directly.
